@@ -1,34 +1,45 @@
 $('main').append(
-    '<h3 id="new">Meglepiiii</h3>'
+  '<h3 id="new">Meglepiiii</h3>'
 );
 
 $("#new").css("background", "red");
 
 let names = ['Eva', "Peter", "Me"];
-console.log (names);
+console.log(names);
 
-names.forEach(value => {
-  $('ul').append(
-   /* console.log(value);*/
-    '<li>ujElem</li>'
-  );
+// names.forEach(value => {
+//   $('ul').append(
+//     /* console.log(value);*/
+//     '<li>ujElem</li>'
+//   );
+// });
+
+///////////////////////////////////////////////////
+// HOGYAN KESZITSUNK UJ DOM ELEMENTET innerHTML-LEL
+///////////////////////////////////////////////////
+names.forEach(name => {
+  var listElement = document.createElement('li');
+  listElement.innerHTML = name;
+  console.log('listElement', listElement);
+  $('ul').append(listElement);
 });
+///////////////////////////////////////////////////
 
 /*let printNumbers = (n) => {
   for (let i = 0; i < n; i++) {
     console.log(i);
   }
-} 
+}
 
 printNumbers(10);
 
 for (let i = 0; i < 10; i++) {
     console.log(i);
   }
- 
+
   for (let i = 0; i < 10; i = i + 2) {
     console.log(i);
- */   
+ */
 
 
 /*let printValues = (array) => {
@@ -38,11 +49,11 @@ for (let i = 0; i < 10; i++) {
   }
 
   printValues([1, 2, 3, 4]);*/
-  
- /* let printValues2 = (array) => {
-    array.forEach(value => {
-      console.log(value);
-    });
-  }
 
-  printValues2([1, 3, 5])*/
+/* let printValues2 = (array) => {
+   array.forEach(value => {
+     console.log(value);
+   });
+ }
+
+ printValues2([1, 3, 5])*/
