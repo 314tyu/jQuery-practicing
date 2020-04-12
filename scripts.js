@@ -1,18 +1,26 @@
-$('main').append(
-    '<h3 id="new">Meglepiiii</h3>'
-);
-
-$("#new").css("background", "red");
-
-let names = ['Eva', "Peter", "Me"];
+let names = ['Eva', "Peter", "Me", "Tom"];
 console.log (names);
 
 names.forEach(value => {
+  if (value !== "Me") {
   $('ul').append(
-   /* console.log(value);*/
-    '<li>ujElem</li>'
-  );
+    '<li>'+value+'</li>'
+  );} else {
+    $('ul').append(
+      '<li class="me">'+value+'</li>'
+    );
+  }
+  console.log(value);
 });
+
+$('.me').css("font-weight", "bold");
+
+/*$('main').append(
+  '<h3 id="new">Meglepiiii</h3>'
+);
+
+$("#new").css("background", "red");*/
+
 
 /*let printNumbers = (n) => {
   for (let i = 0; i < n; i++) {
