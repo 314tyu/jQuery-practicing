@@ -1,0 +1,11 @@
+h1 {color: red}
+
+.purple {color: purple}
+
+li {
+  list-style-type: square
+}
+
+ol {
+  list-style-type: upper-roman
+}
