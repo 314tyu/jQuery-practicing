@@ -3,7 +3,7 @@ $('main').append('<h3 id="new">Meglepiiii</h3>');
 $('#new').css('background', 'red');
 
 let names = ['Eva', 'Peter', 'Me'];
-console.log(names);
+// console.log(names);
 
 // names.forEach(value => {
 //   $('ul').append(
@@ -21,7 +21,7 @@ names.forEach((name) => {
   if (name === 'Me') {
     listElement.classList.add('sajat-nev');
   }
-  console.log('listElement', listElement);
+  // console.log('listElement', listElement);
   $('ul').append(listElement);
 });
 //////////////////////////////////////////////////
@@ -29,8 +29,26 @@ names.forEach((name) => {
 ///////////////////////////////////////////////////
 // input value
 ///////////////////////////////////////////////////
-var inputValue = document.getElementById('my-text-input').value;
-console.log('inputValue', inputValue);
+
+// dom elemek definiálása
+var inputParagraph = document.querySelector('#input-value-text');
+var inputField = document.getElementById('my-text-input');
+var inputValue = inputField.value;
+// console.log('inputField', inputField);
+
+// függvény amit akkor hívok meg amikor 'keyup' történik (felengedem a billentyűzetet)
+var logInput = (event) => {
+  console.log(event, 'logInput');
+  inputParagraph.innerHTML = event.target.value;
+  $('#input-value-text').css('color', event.target.value);
+};
+
+// hozzáadom az input fieldemhez a 'keyup' esemény kezelését
+inputField.addEventListener('keyup', (e) => {
+  console.log(e.target.value);
+  console.log('inputValue', inputValue);
+  logInput(e);
+});
 
 /*let printNumbers = (n) => {
   for (let i = 0; i < n; i++) {
