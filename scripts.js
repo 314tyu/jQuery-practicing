@@ -10,7 +10,7 @@ names.forEach(value => {
       '<li class="me">'+value+'</li>'
     );
   }
-  console.log(value);
+ /* console.log(value);*/
 });
 
 $('.me').css("font-weight", "bold");
