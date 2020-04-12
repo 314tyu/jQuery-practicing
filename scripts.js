@@ -26,6 +26,12 @@ names.forEach((name) => {
 });
 //////////////////////////////////////////////////
 
+///////////////////////////////////////////////////
+// input value
+///////////////////////////////////////////////////
+var inputValue = document.getElementById('my-text-input').value;
+console.log('inputValue', inputValue);
+
 /*let printNumbers = (n) => {
   for (let i = 0; i < n; i++) {
     console.log(i);
