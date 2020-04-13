@@ -1,3 +1,18 @@
+$('.counter').on('click', () => {
+  console.log("Yeah, you've just clicked me");
+});
+
+$('.changer1').on('click', () => {
+  $('.counter').text("Ugorj a kútba");
+  $('.counter').css("background", "yellow");
+});
+
+$('.changer2').one('click', () => {
+  var changeColor = document.getElementById('newColor').value;
+  console.log(changeColor);
+  $('button').css("background", changeColor);
+});
+
 let names = ['Eva', "Peter", "Me", "Tom"];
 console.log (names);
 
@@ -10,10 +25,31 @@ names.forEach(value => {
       '<li class="me">'+value+'</li>'
     );
   }
- /* console.log(value);*/
 });
 
 $('.me').css("font-weight", "bold");
+
+let additionalBlock = {
+  title: "Added with javascript",
+  text: "This block was added using JavaScript's jQuery library. How awesome!"
+};
+
+$('main').append(  
+    '<h1>'+additionalBlock.title+'</h1>'
+    )
+
+    $('main').append(  
+      '<p>'+additionalBlock.text+'</p>'
+      )
+
+
+
+
+///////////////////////
+//Korábbi gyakorlatok//
+///////////////////////
+
+
 
 /*$('main').append(
   '<h3 id="new">Meglepiiii</h3>'
