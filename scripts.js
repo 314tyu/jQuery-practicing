@@ -1,4 +1,21 @@
 ////////////////////////////////////////
+// Data exchange and event practice #3//
+////////////////////////////////////////
+
+var list = document.getElementById("toDoInput");
+
+document.getElementById("myBtn2").addEventListener("click", myFunction2);
+
+function myFunction2() {
+  list = document.getElementById("toDoInput").innerHTML;
+  console.log(list);
+  $('#toDoList').append(
+    '<li>'+list.value+'</li>'); /////ÉSITTFELADTAM :D///////
+}
+
+
+
+////////////////////////////////////////
 // Data exchange and event practice #1//
 ////////////////////////////////////////
 
@@ -46,10 +63,10 @@ console.log (names);
 
 names.forEach(value => {
   if (value !== "Me") {
-  $('ul').append(
+  $('#listPractice').append(
     '<li>'+value+'</li>'
   );} else {
-    $('ul').append(
+    $('#listPractice').append(
       '<li class="me">'+value+'</li>'
     );
   }
