@@ -1,3 +1,7 @@
+////////////////////////////////////////
+// Data exchange and event practice #1//
+////////////////////////////////////////
+
 $('.counter').on('click', () => {
   console.log("Yeah, you've just clicked me");
 });
@@ -13,7 +17,25 @@ $('.changer2').one('click', () => {
   $('button').css("background", changeColor);
 });
 
-let names = ['Eva', "Peter", "Me", "Tom"];
+////////////////////////////////////////
+// Data exchange and event practice #2//
+////////////////////////////////////////
+
+var i = 0
+
+function Increase() {
+    document.getElementById("click").innerHTML = i++ + 1;
+}
+
+function Decrease() {
+  document.getElementById("click").innerHTML = i-- - 1;
+}
+
+///////////////////////////////////////////
+// HTML manipulation practice with jquery//
+///////////////////////////////////////////
+
+let names = ['Eva', "Me", "Me", "Tom"];
 console.log (names);
 
 names.forEach(value => {

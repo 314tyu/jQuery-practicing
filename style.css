@@ -9,3 +9,14 @@ li {
 ol {
   list-style-type: upper-roman
 }
+
+div {
+  margin-top: 20px;
+  border-top: solid thin;
+  border-bottom: solid thin;
+  padding-bottom: 20px;
+}
+
+.clickCount {
+  border-radius: 5px;
+}
