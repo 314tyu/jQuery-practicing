@@ -31,6 +31,12 @@ function Decrease() {
   document.getElementById("click").innerHTML = i-- - 1;
 }
 
+document.getElementById("myBtn").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("click").innerHTML = i-- - 1;
+}
+
 ///////////////////////////////////////////
 // HTML manipulation practice with jquery//
 ///////////////////////////////////////////
